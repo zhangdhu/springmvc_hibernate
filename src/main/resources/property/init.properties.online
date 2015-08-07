@@ -1,0 +1,8 @@
+#连接数据库
+jdbc.dbcp.dataSource.driverClassName=com.mysql.jdbc.Driver
+#jdbc.dbcp.dataSource.url=jdbc:mysql://182.94.104.13:3306/sgwk?useUnicode=true&characterEncoding=UTF-8
+#jdbc.dbcp.dataSource.username=dahu
+#jdbc.dbcp.dataSource.password=dahu
+jdbc.dbcp.dataSource.url=jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8
+jdbc.dbcp.dataSource.username=root
+jdbc.dbcp.dataSource.password=mysql

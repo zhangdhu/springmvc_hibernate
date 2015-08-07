@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- 配置dbcp数据源 -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <!-- Connection Info -->
+        <property name="driverClassName" value="${jdbc.dbcp.dataSource.driverClassName}" />
+        <property name="url" value="${jdbc.dbcp.dataSource.url}" />
+        <property name="username" value="${jdbc.dbcp.dataSource.username}" />
+        <property name="password" value="${jdbc.dbcp.dataSource.password}" />
+        <!-- Connection Pooling DBCP -->
+        <property name="initialSize" value="${jdbc.dbcp.dataSource.initialSize}0" />
+        <property name="maxActive" value="${jdbc.dbcp.dataSource.maxActive}" />
+        <property name="maxIdle" value="${jdbc.dbcp.dataSource.maxIdle}" />
+        <property name="maxWait" value="${jdbc.dbcp.dataSource.maxWait}" />
+        <property name="poolPreparedStatements" value="${jdbc.dbcp.dataSource.poolPreparedStatements}" />
+        <property name="defaultAutoCommit" value="${jdbc.dbcp.dataSource.defaultAutoCommit}" />
+        <!-- 是否自动回收超时连接 -->
+        <property name="removeAbandoned" value="${jdbc.dbcp.dataSource.removeAbandoned}" />
+        <!--removeAbandonedTimeout: 超时时间(以秒数为单位)-->
+        <property name="removeAbandonedTimeout" value="180"/>
+    </bean>
+
+</beans>
